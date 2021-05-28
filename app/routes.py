@@ -1,7 +1,7 @@
-from . import bp as main
-from flask import render_template, redirect, url_for
+from flask import current_app as app, render_template
 
-@main.route('/')
+@app.route('/')
 def index():
     context = dict()
-    return render_template('main/index.html', **context)
+    return render_template('app/templates/index.html', **context)
+

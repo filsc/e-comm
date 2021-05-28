@@ -1,4 +1,4 @@
-import os, click
+import click, os
 #from flask import cli
 #from flask.cli import AppGroup
 
