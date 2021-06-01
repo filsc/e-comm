@@ -4,8 +4,9 @@ from config import Config
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_moment import Moment 
+from flask_login import LoginManger
 from flask import Blueprint
-from .import routes
+
 #bp = Blueprint('main', __name__, static_folder='static',
  #              template_folder='templates')
 
@@ -21,6 +22,10 @@ def create_app(config_class=Config):
     db.init_app(app)
     migrate.init_app(app,db)
     moment.init_app(app)
+    db = SQLAlchemy(app)
+    migrate = Mrigrate(app, db)
+    login_manager = LoginManager(app)
+    moment = Moment(app)
 
     with app.app_context():
         # from . import models
@@ -30,3 +35,5 @@ def create_app(config_class=Config):
         #app.register_blueprint(main, url_prefix='/')
 
     return app
+    
+from .import routes, models

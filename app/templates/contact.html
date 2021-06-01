@@ -53,7 +53,7 @@
                                     <button class="search-toggle" data-toggle="dropdown"><i
                                             class="pe-7s-search"></i></button>
                                     <div class="dropdown-menu header-search-form">
-                                        <form action=form action="{{ url_for('auth.login') }}" method="POST">
+                                        <form action="#">
                                             <input type="text" placeholder="Search">
                                             <button><i class="fa fa-long-arrow-right"></i></button>
                                         </form>
@@ -123,11 +123,7 @@
                             <nav class="main-menu menu-right float-right">
                                 <ul>
                                     <li><a href="index.html">Home</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="index.html">Home one</a></li>
-                                            <li><a href="index-2.html">Home two</a></li>
-                                            <li><a href="index-3.html">Home three</a></li>
-                                        </ul>
+
                                     </li>
                                     <li><a href="shop.html">shop</a>
                                         <ul class="sub-menu">
@@ -137,7 +133,7 @@
                                     </li>
 
 
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li class="active"><a href="contact.html">Contact</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -154,51 +150,58 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="page-banner-content">
-                            <h1>Login page</h1>
+                            <h1>contact us</h1>
                             <ul class="breadcrumb">
                                 <li><a href="#">Home</a></li>
-                                <li class="active">login page</li>
+                                <li class="active">contact us</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- END PAGE BANNER SECTION -->
 
-        <!-- PAGE SECTION START -->
-        <div class="page-section section pt-120 pb-120">
+        <!-- PAGE SECTION -->
+        <div class="page-section section pt-120 pb-90">
             <div class="container">
+                <div class="row mb-40">
+                    <!-- Contact Map -->
+                    <div class="contact-map col-md-6 col-xs-12 mb-40">
+                        <div id="map"></div>
+                    </div>
+                    <!-- Contact Form -->
+                    <div class="contact-form col-md-6 col-xs-12 mb-40">
+                        <h3>Send Your Massage</h3>
+                        <form id="contact-form" action="mail.php" method="post">
+                            <div class="row">
+                                <div class="col-sm-6 col-xs-12 mb-20"><input type="text" name="name"
+                                        placeholder="Your name"></div>
+                                <div class="col-sm-6 col-xs-12 mb-20"><input type="text" name="email"
+                                        placeholder="Your email"></div>
+                                <div class="col-xs-12 mb-20"><textarea name="message"
+                                        placeholder="Your message"></textarea></div>
+                                <div class="col-xs-12"><input type="submit" value="SUBMIT"></div>
+                            </div>
+                        </form>
+                        <p class="form-messege"></p>
+                    </div>
+                </div>
+                <!-- Contact Info -->
                 <div class="row">
-                    <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
-                        <div class="login-reg-form">
-                            <form action="#">
-                                <div class="row">
-                                    <div class="col-xs-12 mb-20">
-                                        <label for="username">Username or email <span class="required">*</span></label>
-                                        <input name="username" id="username" type="text">
-                                    </div>
-                                    <div class="col-xs-12 mb-20">
-                                        <label for="password">Passwords <span class="required">*</span></label>
-                                        <input name="password" id="password" type="password">
-                                    </div>
-                                    <div class="col-xs-12 mb-20">
-                                        <input value="Login" name="login" class="inline" type="submit">
-                                        <label class="inline" for="rememberme">
-                                            <input value="forever" id="rememberme" name="rememberme" type="checkbox">
-                                            Remember me
-                                        </label>
-                                    </div>
-                                    <div class="col-xs-12">
-                                        <a href="#">Lost your password?</a>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+                    <div class="contact-info col-md-4 text-center mb-30">
+                        <a href="tel:+88587485698765">Phone: +88 58 7485 6987 65</a>
+                    </div>
+                    <div class="contact-info col-md-4 text-center mb-30">
+                        <a href="mailto:outside@email.com">Email: outside@email.com</a>
+                    </div>
+                    <div class="contact-info col-md-4 text-center mb-30">
+                        <p>Address: house 09,Road 3,Dhaka</p>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- PAGE SECTION END -->
+        <!-- END PAGE SECTION -->
 
         <!-- FOOTER TOP SECTION START -->
         <div class="footer-top-section section pt-100 pb-60">
@@ -283,7 +286,6 @@
         </div>
         <!-- FOOTER BOTTOM SECTION END -->
 
-
     </div>
     <!-- Body main wrapper end -->
 
@@ -296,6 +298,10 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- Plugins js -->
     <script src="js/plugins.js"></script>
+    <!-- Google Map APi -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2x66W_L99EvyG7NQRhbJf6UaVAdzA38E"></script>
+    <!-- Map Activation -->
+    <script src="js/map.js"></script>
     <!-- Ajax Mail js -->
     <script src="js/ajax-mail.js"></script>
     <!-- Main js -->
