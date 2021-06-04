@@ -1,18 +1,8 @@
-from app import create_app, cli
-from app.cli import blueprint
-#from app import app
-from app.models import Post, User
+from app import app
 
-app = create_app()
-app.cli.add_command(blueprint)
-
-@app.shell_context_processor
-def makeShellContext():
-    return {
-        'db':db,
-        'Post': Post, 
-        'USER': User,
-    }
-
-
-
+# @app.shell_context_processor
+# def make_shell_context():
+#     return {
+#         'db': db,
+#         'Post': Post,
+#         'User': User
