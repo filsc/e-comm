@@ -64,7 +64,8 @@
                                     <ul>
                                         <li><a href="#" data-toggle="dropdown"><i class="pe-7s-config"></i></a>
                                             <ul class="dropdown-menu">
-                                                <li><a href="login.html">Log in</a></li>
+                                                <!-- <li><a href="login.html">Log in</a></li> -->
+                                               <li> <a href="{{ url_for('login') }}" class="nav-link">Login</a></li>
                                                 <li><a href="register.html">Register</a></li>
                                             </ul>
                                         </li>
@@ -568,7 +569,9 @@
                                     <img src="img/product/2.jpg" alt="" />
                                 </div>
                                 <div class="pro-large-img tab-pane" id="pro-large-img-2">
-                                    <img src="img/product/1.jpg" alt="" />
+                                    <img class="class_name_here" src="https://placehold.it/500/500&image=Product" alt="product">
+                                <!-- <img class='image-for-home' src="{{url_for('static', filename='wall1.jpg')}}" /> -->
+                                    <!-- <img src="img/product/1.jpg" alt="" /> -->
                                 </div>
                                 <div class="pro-large-img tab-pane" id="pro-large-img-3">
                                     <img src="img/product/3.jpg" alt="" />
