@@ -3,6 +3,7 @@ from flask import redirect, render_template, flash, request, url_for
 from flask_login import login_user
 from app.models import User
 
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -24,5 +25,17 @@ def register():
         u.from_dict(request.form)
         u.save()
         flash('User created successfully', 'info')
-        return redirect(url_for('app.login'))
+        return redirect(url_for('register'))
     return render_template('register.html')
+
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    return render_template('index.html')
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
+@app.route('/shop')
+def shop():
+    return render_template('shop.html')
