@@ -80,10 +80,10 @@
                                 <div class="all-cart-product clearfix">
                                     <div class="single-cart clearfix">
                                         <div class="cart-image">
-                                            <a href="product-details.html"><img src="img/product/cart-1.jpg" alt=""></a>
+                                            <a href="{{ url_for('productd') }}"><img src="https://placeimg.com/640/480/any" alt=""></a>
                                         </div>
                                         <div class="cart-info">
-                                            <h5><a href="product-details.html">Le Parc Minotti Chair</a></h5>
+                                            <h5><a href="{{ url_for('productd') }}">Le Parc Minotti Chair</a></h5>
                                             <p>1 x £9.00</p>
                                             <a href="#" class="cart-delete" title="Remove this item"><i
                                                     class="pe-7s-trash"></i></a>
@@ -91,10 +91,10 @@
                                     </div>
                                     <div class="single-cart clearfix">
                                         <div class="cart-image">
-                                            <a href="product-details.html"><img src="img/product/cart-2.jpg" alt=""></a>
+                                            <a href="{{ url_for('productd') }}"><img src="img/product/cart-2.jpg" alt=""></a>
                                         </div>
                                         <div class="cart-info">
-                                            <h5><a href="product-details.html">DSR Eiffel chair</a></h5>
+                                            <h5><a href="{{ url_for('productd') }}">DSR Eiffel chair</a></h5>
                                             <p>1 x £9.00</p>
                                             <a href="#" class="cart-delete" title="Remove this item"><i
                                                     class="pe-7s-trash"></i></a>
@@ -118,10 +118,10 @@
 
                             </li>
                             <li><a href="{{ url_for('shop') }}">shop</a>
-                                <ul class="sub-menu">
+                                <!-- <ul class="sub-menu">
                                     <li><a href="{{ url_for('shop') }}">shop</a></li>
-                                    <li><a href="product-details.html">product details</a></li>
-                                </ul>
+                                    <li><a href="{{ url_for('productd') }}">product details</a></li>
+                                </ul> -->
                             </li>
 
 

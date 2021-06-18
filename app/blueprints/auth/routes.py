@@ -15,7 +15,7 @@ def login():
         remember_me = True if request.form.get('rememberme') is not None else False
         login_user(user, remember=request.form.get('rememberme'))
         print('SUCCESS')
-        return redirect(url_for('login'))
+        return redirect(url_for('index'))
     return render_template('login.html')
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -24,8 +24,8 @@ def register():
         u = User()
         u.from_dict(request.form)
         u.save()
-        flash('User created successfully', 'info')
-        return redirect(url_for('register'))
+        flash('You have Registered', 'success')
+        return redirect(url_for('index'))
     return render_template('register.html')
 
 @app.route('/', methods=['GET', 'POST'])
@@ -39,3 +39,7 @@ def contact():
 @app.route('/shop')
 def shop():
     return render_template('shop.html')
+
+@app.route('/productd')
+def productd():
+    return render_template('product-details.html')

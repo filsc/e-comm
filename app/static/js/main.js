@@ -100,12 +100,12 @@ $('#price-range').slider({
    values: [ 70, 500 ],
    slide: function( event, ui ) {
     
-	$('.price-amount').val( '€' + ui.values[ 0 ] + ' - €' + ui.values[ 1 ] );
+	$('.price-amount').val( '$' + ui.values[ 0 ] + ' - $' + ui.values[ 1 ] );
     
    }
 });
-$('.price-amount').val( '€' + $('#price-range').slider( 'values', 0 ) +
-   ' - €' + $('#price-range').slider('values', 1 ) );
+$('.price-amount').val( '$' + $('#price-range').slider( 'values', 0 ) +
+   ' - $' + $('#price-range').slider('values', 1 ) );
 
 /*--
     Product Quantity
